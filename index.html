@@ -14,46 +14,20 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			/* Banner container for logo background */
-			#banner {
-				position: relative;
+			/* Logo styling - placed between title and subtitle */
+			.banner-logo {
+				display: block;
+				margin: 20px auto 20px auto;
+				max-width: 150px;
+				width: 100%;
+				height: auto;
 			}
 			
-			/* Logo background container - exactly where you marked in blue */
-			.logo-background-area {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				width: 400px;
-				height: 400px;
-				background-image: url('images/logo-bg.png');
-				background-size: contain;
-				background-repeat: no-repeat;
-				background-position: center;
-				opacity: 1;
-				pointer-events: none;
-				z-index: 0;
-			}
-			
-			#banner .inner {
-				position: relative;
-				z-index: 1;
-			}
-			
-			/* Make sure text is readable above the logo */
-			#banner .inner h2,
-			#banner .inner p,
-			#banner .inner .actions {
-				position: relative;
-				z-index: 2;
-			}
-			
-			/* Responsive for mobile */
+			/* Adjust spacing on mobile */
 			@media (max-width: 736px) {
-				.logo-background-area {
-					width: 250px;
-					height: 250px;
+				.banner-logo {
+					max-width: 100px;
+					margin: 15px auto 15px auto;
 				}
 			}
 		</style>
@@ -84,13 +58,14 @@
 						</nav>
 					</header>
 
-				<!-- Banner with Logo Background in Blue Area -->
+				<!-- Banner with Logo Between Title and Subtitle -->
 					<section id="banner">
-						<!-- Logo background exactly where you marked -->
-						<div class="logo-background-area"></div>
-						
 						<div class="inner">
 							<h2>ARIDI's TECHTRONICS</h2>
+							
+							<!-- LOGO HERE - Between Title and Subtitle -->
+							<img src="images/logo-bg.png" alt="ARIDI's TECHTRONICS Logo" class="banner-logo" />
+							
 							<p>Your Trusted Partner for<br />
 							Electronics Repair & IT Solutions<br />
 							<span style="font-size: 0.8em;">Fast • Reliable • Affordable</span></p>
