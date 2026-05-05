@@ -14,10 +14,19 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
+			/* REMOVE preloader delay - make everything visible immediately */
+			body.is-preload #page-wrapper {
+				opacity: 1 !important;
+			}
+			
+			body.is-preload:after {
+				display: none !important;
+			}
+			
 			/* Full width background logo that fills under the text */
 			#banner {
 				position: relative;
-				background: #1e1f29; /* Fallback color */
+				background: #1e1f29;
 			}
 			
 			/* Logo as full width background image - edge to edge */
@@ -39,7 +48,7 @@
 				z-index: 0;
 			}
 			
-			/* Make sure text stays above the background and moved DOWN more */
+			/* Make sure text stays above the background */
 			#banner .inner {
 				position: relative;
 				z-index: 2;
@@ -264,6 +273,13 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+		<!-- Force remove preloader immediately -->
+		<script>
+			// Remove preloader class instantly
+			document.body.classList.remove('is-preload');
+			document.body.style.opacity = '1';
+		</script>
 
 	</body>
 </html>
