@@ -39,14 +39,15 @@
 				z-index: 0;
 			}
 			
-			/* Make sure text stays above the background */
+			/* Make sure text stays above the background and moved DOWN */
 			#banner .inner {
 				position: relative;
 				z-index: 2;
-				min-height: 400px;
+				min-height: 450px;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
+				padding-top: 80px; /* This moves the title and subtitle DOWN */
 			}
 			
 			/* Keep the "Our Services" link above background */
@@ -58,7 +59,8 @@
 			/* Responsive adjustments */
 			@media (max-width: 736px) {
 				#banner .inner {
-					min-height: 350px;
+					min-height: 380px;
+					padding-top: 60px; /* Less padding on mobile */
 				}
 			}
 		</style>
