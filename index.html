@@ -14,20 +14,32 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			/* Logo above title - solid and clear */
-			.banner-logo {
-				display: block;
-				margin: 0 auto 20px auto;
-				max-width: 300px;
-				width: 1000%;
-				height: auto;
+			/* Full width logo container */
+			.logo-container {
+				width: 100vw;
+				position: relative;
+				left: 50%;
+				right: 50%;
+				margin-left: -50vw;
+				margin-right: -50vw;
+				background: #1e1f29;
+				padding: 20px 0;
+				margin-bottom: 30px;
 			}
 			
-			/* Responsive for mobile */
+			.logo-full-width {
+				display: block;
+				width: 100%;
+				max-width: 100%;
+				height: auto;
+				object-fit: cover;
+			}
+			
+			/* Responsive padding */
 			@media (max-width: 736px) {
-				.banner-logo {
-					max-width: 120px;
-					margin-bottom: 15px;
+				.logo-container {
+					padding: 10px 0;
+					margin-bottom: 20px;
 				}
 			}
 		</style>
@@ -58,12 +70,14 @@
 						</nav>
 					</header>
 
-				<!-- Banner with Logo ABOVE the title -->
+				<!-- Banner with FULL WIDTH Logo Above Title -->
 					<section id="banner">
+						<!-- FULL WIDTH LOGO - LEFT EDGE TO RIGHT EDGE -->
+						<div class="logo-container">
+							<img src="images/logo-bg.png" alt="ARIDI's TECHTRONICS Logo" class="logo-full-width" />
+						</div>
+						
 						<div class="inner">
-							<!-- LOGO ABOVE THE TITLE -->
-							<img src="images/logo-bg.png" alt="ARIDI's TECHTRONICS Logo" class="banner-logo" />
-							
 							<h2>ARIDI's TECHTRONICS</h2>
 							<p>Your Trusted Partner for<br />
 							Electronics Repair & IT Solutions<br />
