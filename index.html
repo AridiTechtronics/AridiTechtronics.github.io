@@ -14,21 +14,46 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			/* Solid logo above text - NO watermark effect */
-			.banner-logo {
-				display: block;
-				margin: 0 auto 30px auto;
-				max-width: 200px;
-				width: 100%;
-				height: auto;
-				/* No opacity - solid and clear */
+			/* Banner container for logo background */
+			#banner {
+				position: relative;
 			}
 			
-			/* Make it responsive on mobile */
+			/* Logo background container - exactly where you marked in blue */
+			.logo-background-area {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 400px;
+				height: 400px;
+				background-image: url('images/logo-bg.png');
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				opacity: 1;
+				pointer-events: none;
+				z-index: 0;
+			}
+			
+			#banner .inner {
+				position: relative;
+				z-index: 1;
+			}
+			
+			/* Make sure text is readable above the logo */
+			#banner .inner h2,
+			#banner .inner p,
+			#banner .inner .actions {
+				position: relative;
+				z-index: 2;
+			}
+			
+			/* Responsive for mobile */
 			@media (max-width: 736px) {
-				.banner-logo {
-					max-width: 140px;
-					margin-bottom: 20px;
+				.logo-background-area {
+					width: 250px;
+					height: 250px;
 				}
 			}
 		</style>
@@ -59,12 +84,12 @@
 						</nav>
 					</header>
 
-				<!-- Banner with SOLID Logo Above Text -->
+				<!-- Banner with Logo Background in Blue Area -->
 					<section id="banner">
+						<!-- Logo background exactly where you marked -->
+						<div class="logo-background-area"></div>
+						
 						<div class="inner">
-							<!-- SOLID LOGO - CLEAR, NOT WATERMARK -->
-							<img src="images/logo.png" alt="ARIDI's TECHTRONICS" class="banner-logo" />
-							
 							<h2>ARIDI's TECHTRONICS</h2>
 							<p>Your Trusted Partner for<br />
 							Electronics Repair & IT Solutions<br />
