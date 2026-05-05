@@ -13,6 +13,72 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Custom style for logo background watermark */
+			#banner {
+				position: relative;
+				overflow: hidden;
+			}
+			
+			#banner::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 80%;
+				max-width: 500px;
+				height: auto;
+				aspect-ratio: 1;
+				background-image: url('images/logo-watermark.png');
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				opacity: 0.15;
+				pointer-events: none;
+				z-index: 0;
+			}
+			
+			#banner .inner {
+				position: relative;
+				z-index: 1;
+			}
+			
+			/* Optional: Add watermark to header as well */
+			#header {
+				position: relative;
+			}
+			
+			#header::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 20px;
+				transform: translateY(-50%);
+				width: 40px;
+				height: 40px;
+				background-image: url('images/logo-small.png');
+				background-size: contain;
+				background-repeat: no-repeat;
+				opacity: 0.3;
+				pointer-events: none;
+			}
+			
+			#header h1 {
+				margin-left: 50px;
+			}
+			
+			/* Adjust for mobile */
+			@media (max-width: 736px) {
+				#header::before {
+					width: 30px;
+					height: 30px;
+				}
+				#header h1 {
+					margin-left: 40px;
+				}
+			}
+		</style>
 	</head>
 	<body class="landing is-preload">
 
@@ -20,8 +86,7 @@
 			<div id="page-wrapper">
 
 				<!-- Header -->
-								
-					<header id="header" class="alt" style="background-image: url('images/logo-bg.png'); background-repeat: no-repeat; background-position: 10px center; background-size: 40px;">
+					<header id="header" class="alt">
 						<h1><a href="index.html">ARIDI's TECHTRONICS</a></h1>
 						<nav id="nav">
 							<ul>
@@ -41,7 +106,7 @@
 						</nav>
 					</header>
 
-				<!-- Banner -->
+				<!-- Banner with Logo Watermark -->
 					<section id="banner">
 						<div class="inner">
 							<h2>ARIDI's TECHTRONICS</h2>
@@ -176,11 +241,11 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="icons">
-							<li><a href="#" class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+							<li><a href="https://wa.me/96176015670" class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a></li>
 							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-							<li><a href="#" class="icon solid fa-phone"><span class="label">Phone</span></a></li>
+							<li><a href="mailto:aridis.techtronics@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="tel:+96176015670" class="icon solid fa-phone"><span class="label">Phone</span></a></li>
 						</ul>
 						<ul class="copyright">
 							<li>&copy; ARIDI's TECHTRONICS 2025</li>
