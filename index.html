@@ -14,19 +14,20 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			/* Add logo image above the text in banner */
-			#banner .inner .logo-above {
+			/* Solid logo above text - NO watermark effect */
+			.banner-logo {
 				display: block;
 				margin: 0 auto 30px auto;
-				max-width: 300px;
-				width: auto;
+				max-width: 200px;
+				width: 100%;
 				height: auto;
+				/* No opacity - solid and clear */
 			}
 			
 			/* Make it responsive on mobile */
 			@media (max-width: 736px) {
-				#banner .inner .logo-above {
-					max-width: 120px;
+				.banner-logo {
+					max-width: 140px;
 					margin-bottom: 20px;
 				}
 			}
@@ -58,11 +59,11 @@
 						</nav>
 					</header>
 
-				<!-- Banner with Logo Above Text -->
+				<!-- Banner with SOLID Logo Above Text -->
 					<section id="banner">
 						<div class="inner">
-							<!-- LOGO ABOVE THE TEXT -->
-							<img src="images/logo-bg.png" alt="ARIDI's TECHTRONICS Logo" class="logo-above" />
+							<!-- SOLID LOGO - CLEAR, NOT WATERMARK -->
+							<img src="images/logo.png" alt="ARIDI's TECHTRONICS" class="banner-logo" />
 							
 							<h2>ARIDI's TECHTRONICS</h2>
 							<p>Your Trusted Partner for<br />
